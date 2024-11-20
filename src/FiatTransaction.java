@@ -1,4 +1,4 @@
-public class EthereumTransaction implements Ethereum {
+public class FiatTransaction implements Fiat {
     @Override
     public double ethereumValue() {
         return 0;

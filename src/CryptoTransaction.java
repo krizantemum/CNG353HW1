@@ -1,4 +1,4 @@
-public class BitcoinTransaction implements Bitcoin{
+public class CryptoTransaction implements Crypto {
 
     @Override
     public double bitcoinValue() {return 0;}

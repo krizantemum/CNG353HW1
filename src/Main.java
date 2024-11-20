@@ -2,10 +2,15 @@
 public class Main {
     public static void main(String[] args) {
         Light light = new Light();
+        Observer authorities = new PublicSafetyAuthorities();
         WaterSystem waterSystem = new WaterSystem();
+        ElectricitySystem electricitySystem = new ElectricitySystem();
         TrafficLights trafficLights = new TrafficLights();
         CityController cityController = CityController.getController();
         Observable observable = new SecuritySystem();
+        PublicUtilityServices utilityServices = PublicUtilityServices.getUtility();
+
+        observable.addSubscriber(authorities);
 
         Observer observer =  new Residents("Yurekce", "Altin");
         observable.addSubscriber(observer);
@@ -18,11 +23,17 @@ public class Main {
         observer =  new Residents("Ardahan", "Bilcan");
         observable.addSubscriber(observer);
 
-        cityController.setCommand(new WaterOn(waterSystem));
-        cityController.invoke();
+        utilityServices.setCommand(new WaterOn(waterSystem));
+        utilityServices.invoke();
 
-        cityController.setCommand(new WaterOff(waterSystem));
-        cityController.invoke();
+        utilityServices.setCommand(new WaterOff(waterSystem));
+        utilityServices.invoke();
+
+        utilityServices.setCommand(new ElectricityOn(electricitySystem));
+        utilityServices.invoke();
+
+        utilityServices.setCommand(new ElectricityOff(electricitySystem));
+        utilityServices.invoke();
 
         cityController.setCommand(new LampOnCommand(light));
         cityController.invoke();

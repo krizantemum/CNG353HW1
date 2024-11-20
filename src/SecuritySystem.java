@@ -16,7 +16,7 @@ public class SecuritySystem implements Observable{
     @Override
     public void sendNotification() {
         for (Observer resident: observerList){
-            resident.getSecurityNotification("seek closest shelter immediately!");
+            resident.getSecurityNotification("Tsunami is coming!");
         }
     }
 }

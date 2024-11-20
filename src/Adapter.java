@@ -1,9 +1,9 @@
-public class Adapter implements Bitcoin{
-    private Ethereum ethereum;
-    private Bitcoin bitcoin;
+public class Adapter implements Crypto {
+    private Fiat ethereum;
+    private Crypto bitcoin;
     private double value;
 
-    public Adapter(Ethereum ethereum) {
+    public Adapter(Fiat ethereum) {
         this.ethereum = ethereum;
     }
 

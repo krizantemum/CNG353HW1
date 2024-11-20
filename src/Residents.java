@@ -10,6 +10,6 @@ public class Residents implements Observer{
 
     @Override
     public void getSecurityNotification(String message) {
-        System.out.println(name + " " + surname + " " + message);
+        System.out.println(name + " " + surname + " " + message + " Seek shelter immediately!");
     }
 }

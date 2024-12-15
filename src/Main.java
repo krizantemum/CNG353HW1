@@ -10,8 +10,14 @@ public class Main {
         Observable observable = new SecuritySystem();
         PublicUtilityServices utilityServices = PublicUtilityServices.getUtility();
         CloudClient client = new CloudClient();
+        Calculate calculate1 = new Calculate(new Algorithm1());
+        Calculate calculate2 = new Calculate(new Algorithm2());
+
         client.handleValidProxy();
         client.handleInvalidProxy();
+
+        calculate1.algorithm();
+        calculate2.algorithm();
 
         observable.addSubscriber(authorities);
 

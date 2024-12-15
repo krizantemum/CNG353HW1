@@ -9,6 +9,9 @@ public class Main {
         CityController cityController = CityController.getController();
         Observable observable = new SecuritySystem();
         PublicUtilityServices utilityServices = PublicUtilityServices.getUtility();
+        CloudClient client = new CloudClient();
+        client.handleValidProxy();
+        client.handleInvalidProxy();
 
         observable.addSubscriber(authorities);
 
@@ -20,7 +23,7 @@ public class Main {
         observable.addSubscriber(observer);
         observer =  new Residents("Onur", "Oney");
         observable.addSubscriber(observer);
-        observer =  new Residents("Ardahan", "Bilcan");
+        observer =  new Residents("Ardahan", "Bilican");
         observable.addSubscriber(observer);
 
         utilityServices.setCommand(new WaterOn(waterSystem));

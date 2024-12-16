@@ -1,11 +1,11 @@
 public class FiatTransaction implements Fiat {
     @Override
-    public double ethereumValue() {
-        return 0;
+    public String fiatValue() {
+        return "Fiat value";
     }
 
     @Override
-    public void shareTranscript(double val) {
+    public void shareTranscript(String val) {
         System.out.println(val +" is the value");
     }
 }

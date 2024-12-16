@@ -1,4 +1,4 @@
 public interface Crypto {
-    public double bitcoinValue();
-    public void shareTranscript(double val);
+    public String bitcoinValue();
+    public void shareTranscript(String val);
 }

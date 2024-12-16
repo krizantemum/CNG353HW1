@@ -10,6 +10,17 @@ public class Main {
         Observable observable = new SecuritySystem();
         PublicUtilityServices utilityServices = PublicUtilityServices.getUtility();
         CloudClient client = new CloudClient();
+        Fiat fiat =  new FiatTransaction();
+        Crypto crypto = new CryptoTransaction();
+        Crypto adapter = new Adapter(crypto);
+
+        fiat.fiatValue();
+        fiat.shareTranscript("15");
+        crypto.bitcoinValue();
+        crypto.shareTranscript("20");
+        adapter.shareTranscript(adapter.bitcoinValue());
+
+
         Calculate calculate1 = new Calculate(new Algorithm1());
         Calculate calculate2 = new Calculate(new Algorithm2());
 

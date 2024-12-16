@@ -1,8 +1,8 @@
 public class CryptoTransaction implements Crypto {
 
     @Override
-    public double bitcoinValue() {return 0;}
+    public String bitcoinValue() {return "Crypto bitcoin value";}
 
     @Override
-    public void shareTranscript(double val) {System.out.println(val +" is the value");}
+    public void shareTranscript(String val) {System.out.println(val +" is the value");}
 }

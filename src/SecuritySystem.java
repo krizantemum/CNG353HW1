@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SecuritySystem implements Observable{
-    List<Observer> observerList = new ArrayList<>();
+
     @Override
     public void addSubscriber(Observer observer) {
         observerList.add(observer);
